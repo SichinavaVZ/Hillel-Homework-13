@@ -1,0 +1,264 @@
+body{
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+/* HEADER */
+
+.header-nav{
+	background: #122a2f;
+}
+.navbar{
+	position: relative;
+	@media (max-width: 576px){
+		margin: 0 15px 0 15px;
+	}
+	.logo{
+		background: url('../../images/sprite.png') no-repeat -20px -14px;
+		width: 39px;
+		height: 59px;
+		margin: 16px 0 25px 0;
+		p{
+			color: #ffffff;
+			margin: 32px 0 0 45px;
+			font-size: 28px;
+			line-height: 0;
+			font-weight: 700;
+			letter-spacing: 4.5px;
+		}
+		span{
+			color: #ffffff;
+			margin: 11px 0 0 45px;
+			font-size: 8px;
+			letter-spacing: 9.5px;
+			font-weight: 700;
+			display: block;
+		}
+	}
+	.navbar-nav .nav-link{
+		color: #ffffff;
+		font-size: 14px;
+		margin: -5px -3px 0 39px;
+		font-weight: 700;
+		transition: 0.5s;
+		@media (max-width: 992px){
+			margin-left: 0;
+			font-size: 25px;
+		}
+		&:hover{
+			color: #ffe600;
+		}
+	}
+	.navbar-nav .active .nav-link
+	{
+		color: #ffe600;
+	}
+	.navbar-nav .nav-item{
+		position: relative;
+		&:not(:first-child):after{
+			content: '';
+			height: 5px;
+			width: 5px;
+			top: 11px;
+			left: 18px;
+			background: #ffe600;
+			position: absolute;
+			@media (max-width: 992px){
+				display: none;
+			}
+		}
+	}
+}
+
+/* / HEADER */
+
+/* INTRO */
+
+.intro-wrapper{
+	height: calc(100vh - 100px);
+	min-height: 500px;
+	background: #11343a;
+}
+
+.intro{
+	min-height: 370px;
+	background: #122a2f;
+	h1{
+		color: #ffffff;
+		font-size: 69px;
+		line-height: 78px;
+		margin-bottom: 41px;
+		margin-top: -12px;
+	}
+	.btn-link{
+		background-color: #ffe600;
+		border-radius: inherit;
+		padding: 12px 52px 12px 50px;
+		margin-left: -3px;
+		color: #131316;
+		font-size: 22px;
+		font-weight: 700;
+		letter-spacing: -1.3px;
+		&:hover{
+			background-color::#d9c400;
+		}
+	}
+}
+
+.btn_down a{
+	width: 60px;
+	height: 60px;
+	background: #ffe600;
+	margin: -60px 0 58px -3px;
+	position: relative;
+	border-radius: inherit;
+	transition: 0.5s;
+	&:hover{
+		background-color::#d9c400;
+	}
+	&:before{
+		content: '';
+		background: url('../../images/sprite.png') no-repeat -225px -44px;
+		width: 20px;
+		height: 19px;
+		top: 24px;
+		left: 21px;
+		position: absolute;
+		animation: infinite-arrow 2.5s infinite ease;
+		@keyframes infinite-arrow{
+			0%{
+				transform: translateY(0px);
+			}
+			50%{
+				transform: translateY(-10px);
+			}
+			100%{
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+/* / INTRO */
+
+/* MAIN */
+
+main{
+	h2{
+		font-weight: 400;
+		color: #515151;
+		font-size: 16px;
+		margin-bottom: 16px;
+		letter-spacing: 0.3px;
+	}
+	h3{
+		font-weight: 700;
+		color: #000000;
+		font-size: 32px;
+		margin-bottom: 42px;
+		position: relative;
+		letter-spacing: -1.1px;
+		&:before{
+			content: '';
+			height: 3px;
+			width: 170px;
+			background: #ffe600;
+			position: absolute;
+			left: calc(50% - 87px);
+			bottom: -23px;
+		}
+	}
+	p{
+		font-weight: 300;
+		color: #707070;
+		font-size: 16px;
+		margin-bottom: 61px;
+		letter-spacing: -0.1px;
+	}
+	.services{
+		margin-bottom: 6px;
+		a{
+			color: #131316;
+			font-weight: 700;
+  		font-size: 21px;
+  		margin-top: 18px;
+  		margin-bottom: 14px;
+  		letter-spacing: -0.5px;
+  		transition: 0.5s;
+  		&:hover{
+				color: #ffe600;
+  		}
+		}
+	}
+	.icon-web,
+	.icon-grap,
+	.icon-photo,
+	.icon-dev{
+		width: 106px;
+		height: 106px;
+		background: #ffe600;
+		position: relative;
+		border-radius: 50%;
+		margin: auto;
+		transition: all 1s;
+		border: 1px solid transparent;
+		&:hover{
+			background: #ffffff;
+			border: 1px solid #18181a;
+		}
+	}
+	.icon-web{
+		&:before{
+			content: "\e903";
+	  	color: #ffffff;
+	  	font-size: 37px;
+	  	position: absolute;
+	  	top: calc(50% - 15px);
+	  	left: calc(50% - 20px);
+	  }
+  	&:hover:before{
+  		color: #ffe600;
+  	}
+  }
+	.icon-grap{
+		&:before{
+			content: "\e901";
+	  	color: #ffffff;
+	  	font-size: 39px;
+	  	position: absolute;
+	  	top: calc(50% - 19px);
+	  	left: calc(50% - 16px);
+		}
+		&:hover:before{
+  		color: #ffe600;
+  	}
+  }
+	.icon-photo{
+		&:before{
+	  	content: "\e902";
+	  	color: #ffffff;
+	  	font-size: 32px;
+	  	position: absolute;
+	  	top: calc(50% - 16px);
+	  	left: calc(50% - 19px);	
+		}
+		&:hover:before{
+  		color: #ffe600;
+  	}
+	}
+	.icon-dev{
+		&:before{
+			content: "\e900";
+	  	color: #ffffff;
+	  	font-size: 41px;
+	  	position: absolute;
+	  	top: calc(50% - 20px);
+	  	left: calc(50% - 20px);
+		}
+		&:hover:before{
+  		color: #ffe600;
+  	}
+  }
+}
+
+/* / MAIN */
