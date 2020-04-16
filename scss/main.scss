@@ -85,10 +85,11 @@ body{
 	background: #122a2f;
 	h1{
 		color: #ffffff;
-		font-size: 69px;
+		font-size: 65px;
 		line-height: 78px;
 		margin-bottom: 41px;
 		margin-top: -12px;
+		font-weight: 700;
 	}
 	.btn-link{
 		background-color: #ffe600;
@@ -168,7 +169,8 @@ main{
 			bottom: -23px;
 		}
 	}
-	p{
+	p,
+	.subtitle{
 		font-weight: 300;
 		color: #707070;
 		font-size: 16px;
@@ -177,17 +179,32 @@ main{
 	}
 	.services{
 		margin-bottom: 6px;
-		a{
+		.title{
+			font-family: 'Oswald', sans-serif;
 			color: #131316;
 			font-weight: 700;
-  		font-size: 21px;
-  		margin-top: 18px;
-  		margin-bottom: 14px;
-  		letter-spacing: -0.5px;
-  		transition: 0.5s;
-  		&:hover{
-				color: #ffe600;
-  		}
+	  	font-size: 21px;
+	  	margin-top: 18px;
+	  	margin-bottom: 14px;
+	  	letter-spacing: -0.5px;
+	  	transition: 0.5s;
+		}
+		a{
+			&:hover{
+				.icon-web,
+				.icon-grap,
+				.icon-photo,
+				.icon-dev{
+					background: #ffffff;
+					border: 1px solid #18181a;
+					&:before{
+						color: #ffe600;
+					}
+				}
+				.title{
+					color: #ffe600;
+				}
+			}
 		}
 	}
 	.icon-web,
@@ -202,10 +219,6 @@ main{
 		margin: auto;
 		transition: all 1s;
 		border: 1px solid transparent;
-		&:hover{
-			background: #ffffff;
-			border: 1px solid #18181a;
-		}
 	}
 	.icon-web{
 		&:before{
@@ -216,9 +229,6 @@ main{
 	  	top: calc(50% - 15px);
 	  	left: calc(50% - 20px);
 	  }
-  	&:hover:before{
-  		color: #ffe600;
-  	}
   }
 	.icon-grap{
 		&:before{
@@ -229,9 +239,6 @@ main{
 	  	top: calc(50% - 19px);
 	  	left: calc(50% - 16px);
 		}
-		&:hover:before{
-  		color: #ffe600;
-  	}
   }
 	.icon-photo{
 		&:before{
@@ -242,9 +249,6 @@ main{
 	  	top: calc(50% - 16px);
 	  	left: calc(50% - 19px);	
 		}
-		&:hover:before{
-  		color: #ffe600;
-  	}
 	}
 	.icon-dev{
 		&:before{
@@ -255,9 +259,6 @@ main{
 	  	top: calc(50% - 20px);
 	  	left: calc(50% - 20px);
 		}
-		&:hover:before{
-  		color: #ffe600;
-  	}
   }
 }
 
